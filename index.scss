@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap');
+
+$bg-color: rgb(2, 138, 203);
+$teller-main: rgb(201, 200, 200);
+$teller-rand: rgb(198, 45, 59);
+$teller-shadow:  rgb(240, 240, 240);
+$kuchen-main: rgb(129, 30, 68);
+$kuchen-border: rgb(161, 37, 84);
+$kuchen-shicht1:  rgb(249, 183, 91);
+$kuchen-shicht2: rgb(242, 128, 85);
+$auge-klein: rgb(61, 60, 60);
+$smile:white;
+$transform-grad: 18deg;
+
+body {
+  background-color: $bg-color;
+  margin: 0;
+}
+
+#text {
+  color: #FFF;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 32px;
+  text-align: center;
+}
+
+#kuchen {
+  cursor: pointer;
+}
+
+.teller {
+  margin: 40px auto 0;
+  position: relative;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: $teller-main;
+  box-shadow: inset 20px 20px 25px $teller-shadow, inset -20px -20px 25px $teller-shadow;
+  border: dotted 15px $teller-rand;
+}
+
+.kuchen {
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 55px;
+
+    .top {
+        border-style: solid;
+        border-color: $kuchen-main transparent $kuchen-main;
+        border-width: 0 67px 46px 73px;
+        z-index: 2;
+        transform: rotate($transform-grad);
+    }
+    .schichten {
+        transform: skewY($transform-grad);
+        z-index: 1;
+        width: 123px;
+        left: -3px;
+        top: -2px;
+        border-left: 8px solid $kuchen-border;
+        border-top: 8px solid $kuchen-border;
+        .schicht {
+            display: flex;
+            justify-content: space-around;
+            clear: both;
+            height: 17px;
+            background:$kuchen-shicht1;
+        }
+        .schicht:nth-child(even) {
+            background: $kuchen-shicht2;
+            border-bottom: 7px solid $kuchen-border;
+        }
+    }
+}
+
+.auge {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: rgb(250, 247, 247);
+    border-radius: 100%;
+    z-index: 3;
+}
+
+.rechts {
+    left: 75px;
+    top: 72px;
+}
+
+.links {
+    top: 60px; 
+    left: 35px;
+}
+
+.auge-klein {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: $auge-klein;
+    border-radius: 100%;
+    z-index: 3;
+}
+
+.auge-klein-links {
+    top: 65px; 
+    left: 38px;
+}
+
+.auge-klein-rechts {
+    top: 77px; 
+    left: 78px;
+}
+
+.smile {
+    display: none;
+    position: absolute;
+    top: 83px; 
+    left: 45px;
+    border-radius: 100%;
+    width: 27px;
+    height: 27px;
+    box-shadow: 2px 4px 0 $smile;
+    transform: rotate(40deg);
+    z-index: 3;
+}
+
+@keyframes rolling-eyes {
+    from {
+        transform: rotate(0deg) translateX(2px) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translateX(2px) rotate(-360deg);
+    }
+}

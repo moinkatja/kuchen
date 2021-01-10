@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap");
+body {
+  background-color: #028acb;
+  margin: 0;
+}
+
+#text {
+  color: #FFF;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 32px;
+  text-align: center;
+}
+
+#kuchen {
+  cursor: pointer;
+}
+
+.teller {
+  margin: 40px auto 0;
+  position: relative;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: #c9c8c8;
+  -webkit-box-shadow: inset 20px 20px 25px #f0f0f0, inset -20px -20px 25px #f0f0f0;
+          box-shadow: inset 20px 20px 25px #f0f0f0, inset -20px -20px 25px #f0f0f0;
+  border: dotted 15px #c62d3b;
+}
+
+.kuchen {
+  position: absolute;
+  margin-top: 40px;
+  margin-left: 55px;
+}
+
+.kuchen .top {
+  border-style: solid;
+  border-color: #811e44 transparent #811e44;
+  border-width: 0 67px 46px 73px;
+  z-index: 2;
+  -webkit-transform: rotate(18deg);
+          transform: rotate(18deg);
+}
+
+.kuchen .schichten {
+  -webkit-transform: skewY(18deg);
+          transform: skewY(18deg);
+  z-index: 1;
+  width: 123px;
+  left: -3px;
+  top: -2px;
+  border-left: 8px solid #a12554;
+  border-top: 8px solid #a12554;
+}
+
+.kuchen .schichten .schicht {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  clear: both;
+  height: 17px;
+  background: #f9b75b;
+}
+
+.kuchen .schichten .schicht:nth-child(even) {
+  background: #f28055;
+  border-bottom: 7px solid #a12554;
+}
+
+.auge {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #faf7f7;
+  border-radius: 100%;
+  z-index: 3;
+}
+
+.rechts {
+  left: 75px;
+  top: 72px;
+}
+
+.links {
+  top: 60px;
+  left: 35px;
+}
+
+.auge-klein {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #3d3c3c;
+  border-radius: 100%;
+  z-index: 3;
+}
+
+.auge-klein-links {
+  top: 65px;
+  left: 38px;
+}
+
+.auge-klein-rechts {
+  top: 77px;
+  left: 78px;
+}
+
+.smile {
+  display: none;
+  position: absolute;
+  top: 83px;
+  left: 45px;
+  border-radius: 100%;
+  width: 27px;
+  height: 27px;
+  -webkit-box-shadow: 2px 4px 0 white;
+          box-shadow: 2px 4px 0 white;
+  -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
+  z-index: 3;
+}
+
+@-webkit-keyframes rolling-eyes {
+  from {
+    -webkit-transform: rotate(0deg) translateX(2px) rotate(0deg);
+            transform: rotate(0deg) translateX(2px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateX(2px) rotate(-360deg);
+            transform: rotate(360deg) translateX(2px) rotate(-360deg);
+  }
+}
+
+@keyframes rolling-eyes {
+  from {
+    -webkit-transform: rotate(0deg) translateX(2px) rotate(0deg);
+            transform: rotate(0deg) translateX(2px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateX(2px) rotate(-360deg);
+            transform: rotate(360deg) translateX(2px) rotate(-360deg);
+  }
+}
+/*# sourceMappingURL=index.css.map */
